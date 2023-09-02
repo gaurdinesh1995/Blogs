@@ -5,9 +5,9 @@ export interface Environment {
   db_url: string;
 }
 
-function getEnvironmentVariables() {
-  if (process.env.NODE_ENV == "prodiction") {
-    ProdEnvironment;
+export function getEnvironmentVariables() {
+  if (process.env.NODE_ENV === "production") {
+    return ProdEnvironment;
   }
-  DevEnvironment;
+  return DevEnvironment;
 }
