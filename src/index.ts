@@ -1,4 +1,3 @@
-import * as express from "express";
 import { Server } from "./server";
 
 let server = new Server().app;
