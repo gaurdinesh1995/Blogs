@@ -12,10 +12,10 @@ export class Server{
         this.ErrorHandler()
     }
     setConfiguration(){
-        this.connectDB()
+        this.connectMongoDB()
         //this.confirmBodyParser()
     }
-    connectDB(){
+    connectMongoDB(){
         let datbseUrl = getEnvironmentVariables().db_url
         mongoose.connect(datbseUrl).then(()=>{
             console.log('Database connected')
