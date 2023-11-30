@@ -1,6 +1,7 @@
 import * as express from 'express'
 import { getEnvironmentVariables } from './Environments/Env';
 import mongoose from 'mongoose';
+import  UserRouter  from './routers/userRouter';
 
 export class Server{
     public app:express.Application = express();
@@ -23,7 +24,7 @@ export class Server{
 
 
     setRoutes(){
-        this.app.use('/user/api',)    
+        this.app.use('/api/user',UserRouter)    
     }
     Error404Handler(){
 
