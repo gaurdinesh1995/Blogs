@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { UserController } from "../controllers/UserController";
+import { UserValidators } from "../validators/userValidator";
 
 export class UserRouter{
     public router:Router;
@@ -9,12 +11,10 @@ export class UserRouter{
         this.postRoutes();
     }
     getRoutes(){
-  this.router.get('/login',(req,res)=>{
-    res.send('we are here to login')
-  })
+ 
     }
     postRoutes(){
-
+      this.router.post('/login',UserValidators.login(), UserController.login)
     }
 }
 
