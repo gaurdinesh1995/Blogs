@@ -2,5 +2,5 @@ import { Environment } from "./Env";
 
 export const ProdEnvironment:Environment = {
   db_url:
-    "mongodb+srv://dinesh:gaur@cluster0.m0wkmow.mongodb.net/?retryWrites=true&w=majority",
+  "mongodb+srv://testdb:testdb@blogs.1ikjkug.mongodb.net/"
 };
